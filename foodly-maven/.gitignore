@@ -1,0 +1,11 @@
+# ignore all files with a .tmp extension
+# *.tmp
+
+# ignore all files in the tmp directory
+# tmp/
+
+# ignore all files in the tmp directory and its subdirectories
+# tmp/**
+
+foodly.iml
+**.idea/**

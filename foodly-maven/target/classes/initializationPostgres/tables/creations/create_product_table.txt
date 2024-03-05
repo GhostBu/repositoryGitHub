@@ -1,0 +1,9 @@
+CREATE TABLE foodly.product (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    code VARCHAR(255),
+    expiration_date TIMESTAMP
+);
+
+GRANT ALL PRIVILEGES ON TABLE foodly.product TO foodly;
+GRANT USAGE, SELECT ON SEQUENCE foodly.product_id_seq TO foodly;

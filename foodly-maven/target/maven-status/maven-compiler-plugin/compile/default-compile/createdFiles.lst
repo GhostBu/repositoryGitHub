@@ -1,0 +1,15 @@
+com\marcofontana\foodlymaven\entities\ProductEntity$ProductEntityBuilder.class
+com\marcofontana\foodlymaven\entities\ProductEntity.class
+com\marcofontana\foodlymaven\configurations\CustomDateDeserializer.class
+com\marcofontana\foodlymaven\view\dto\ProductDto.class
+com\marcofontana\foodlymaven\view\MainFrame.class
+com\marcofontana\foodlymaven\view\jpanels\InserisciProdotto.class
+com\marcofontana\foodlymaven\FoodlyMavenApplication.class
+com\marcofontana\foodlymaven\repositories\ProductRepository.class
+com\marcofontana\foodlymaven\controller\ProductController.class
+com\marcofontana\foodlymaven\services\ProductService.class
+com\marcofontana\foodlymaven\view\jpanels\Cerca.class
+com\marcofontana\foodlymaven\view\MainFrame$1.class
+com\marcofontana\foodlymaven\view\jpanels\InserisciProdotto$1.class
+com\marcofontana\foodlymaven\view\MainFrame$2.class
+com\marcofontana\foodlymaven\converters\BaseConverter.class

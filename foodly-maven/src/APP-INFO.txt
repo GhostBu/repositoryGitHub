@@ -1,0 +1,47 @@
+// JPanel class
+public class MyPanel extends JPanel {
+  public MyPanel() {
+    // create the button and set its text and size
+    JButton button = new JButton("Click me!");
+    button.setPreferredSize(new Dimension(100, 50));
+
+    // add the button to the panel
+    add(button);
+  }
+}
+
+// @Configuration class
+@Configuration
+public class MyConfiguration {
+  @Bean
+  public MyPanel myPanel() {
+    return new MyPanel();
+  }
+}
+
+// @Controller class
+@Controller
+public class MyController {
+  @Autowired
+  private MyPanel myPanel;
+
+  @GetMapping("/panel")
+  public ModelAndView getPanel() {
+    ModelAndView mav = new ModelAndView();
+    mav.setViewName("panel");
+    mav.addObject("panel", myPanel);
+    return mav;
+  }
+}
+
+// Thymeleaf template (panel.html)
+<div id="panel">
+  <script th:inline="javascript">
+    /* <![CDATA[ */
+    var panel = /*[[${panel}]]*/ {};
+    /* ]]> */
+  </script>
+</div>
+This example defines a JPanel class named MyPanel, a @Configuration class named MyConfiguration that registers MyPanel as a bean, a @Controller class named MyController that injects MyPanel and returns a ModelAndView object with a view name of "panel" and a model attribute named "panel" that is set to the injected instance of MyPanel, and a Thymeleaf template named "panel.html" that renders the MyPanel class using the ModelAndView object.
+
+When you run your Spring Boot application and navigate to the URL /panel, the MyPanel class will be rendered in the "panel.html" template.

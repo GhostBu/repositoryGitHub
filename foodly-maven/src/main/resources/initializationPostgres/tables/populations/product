@@ -1,0 +1,2 @@
+INSERT INTO foodly.product (name, code, expirationdate) VALUES ('NomeProdotto', 'CodiceProdotto', NOW());
+

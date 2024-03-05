@@ -1,0 +1,17 @@
+# Usa un'immagine base di PostgreSQL 16
+FROM postgres:16
+
+# Imposta la variabile d'ambiente POSTGRES_PASSWORD per la password del database
+ENV POSTGRES_PASSWORD=password123
+
+# Imposta la variabile d'ambiente POSTGRES_DB per il nome del database
+ENV POSTGRES_DB=foodly
+
+# Imposta la variabile d'ambiente POSTGRES_USER per l'utente del database
+ENV POSTGRES_USER=foodly
+
+# Crea un file di configurazione per il database
+RUN echo "host all all 0.0.0.0/0 scram-sha-256" >> /var/lib/postgresql/data/pg_hba.conf
+
+# Esponi la porta del database
+EXPOSE 5432
